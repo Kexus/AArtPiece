@@ -7,8 +7,8 @@ public class WaggleEnemy : MonoBehaviour {
 	public int health = 3;
 	public int damage = 1;
 	public float ySpeed = .0001F;
-	private Rigidbody2D body;
-	private bool rightMov = true;
+	//private Rigidbody2D body;
+	//private bool rightMov = true;
 	private Vector2 movement;
 	private float yLoc;
 
@@ -17,7 +17,7 @@ public class WaggleEnemy : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		gameObject.transform.GetChild (0).GetChild (0).gameObject.GetComponent<Text> ().text = ((char)Random.Range (12449, 12544)).ToString();
-		body = GetComponent <Rigidbody2D> ();
+		//body = GetComponent <Rigidbody2D> ();
 		yLoc = transform.position.y;
 		StartCoroutine (Oscillate (OccilationFunction.Sine, 5f));
 	}

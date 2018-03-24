@@ -1,0 +1,42 @@
+Initialize engine version: 5.6.3p2 (b3d7a6428558)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer:  (ID=0x11e0)
+    Vendor:   NVIDIA
+    VRAM:     2998 MB
+    Driver:   23.21.13.9065
+Begin MonoManager ReloadAssembly
+Platform assembly: E:\Unity\A Art Piece\Builds\A Art Piece v-0.001_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\Unity\A Art Piece\Builds\A Art Piece v-0.001_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\Unity\A Art Piece\Builds\A Art Piece v-0.001_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\Unity\A Art Piece\Builds\A Art Piece v-0.001_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\Unity\A Art Piece\Builds\A Art Piece v-0.001_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\Unity\A Art Piece\Builds\A Art Piece v-0.001_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: E:\Unity\A Art Piece\Builds\A Art Piece v-0.001_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading E:\Unity\A Art Piece\Builds\A Art Piece v-0.001_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.017 seconds
+Platform assembly: E:\Unity\A Art Piece\Builds\A Art Piece v-0.001_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: E:\Unity\A Art Piece\Builds\A Art Piece v-0.001_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 2.800782 ms
+This would load the game scene if it existed
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+This would load the game scene if it existed
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+This would load the game scene if it existed
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 2494 -> priority: 1 
+  Thread -> id: 11a0 -> priority: 1 
+  Thread -> id: 2ddc -> priority: 1 
+  Thread -> id: 2c9c -> priority: 1 

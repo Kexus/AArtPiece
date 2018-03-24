@@ -21,4 +21,8 @@ public class ScoreScript : MonoBehaviour {
 		score += Random.Range (1, 5);
 		text.text = score.ToString();
 	}
+
+	void IncreaseScoreBy (int i) {
+		score += i;
+	}
 }

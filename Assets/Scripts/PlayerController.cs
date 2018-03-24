@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -11,6 +12,7 @@ public class PlayerController : MonoBehaviour {
 	public float rateOfFire = .3F;
 	public GameObject Projectile;
 	public int health = 10;
+	private bool isAlive = true;
 
 	// Use this for initialization
 	void Start () {
@@ -22,20 +24,27 @@ public class PlayerController : MonoBehaviour {
 		float moveVertical = Input.GetAxis ("Vertical");
 		Vector2 movement = new Vector2 (horizontalMultplier*moveHorizontal, moveVertical);
 		body.AddForce (speedMultiplier*movement);
-		if (Input.GetButtonDown ("Jump")) {
+		if (Input.GetButtonDown ("Jump") && isAlive) {
 			nextFire = Time.time + rateOfFire;
 			Instantiate (Projectile, transform.position, Quaternion.identity);
 		}
-		if (Input.GetButton ("Jump") && Time.time > nextFire) {
+		if (Input.GetButton ("Jump") && Time.time > nextFire && isAlive) {
 			nextFire = Time.time + rateOfFire;
 			Instantiate (Projectile, transform.position, Quaternion.identity);
 		}
 	}
 
-	void TakeDamage (int i) {
+	IEnumerator TakeDamage (int i) {
 		health -= i;
 		if (health <= 0) {
-			DestroyObject (gameObject);
+			GetComponent<SpriteRenderer> ().enabled = false;
+			isAlive = false;
+			yield return StartCoroutine ("waitAndReturn");
 		}
+	}
+
+	IEnumerator waitAndReturn () {
+		yield return new WaitForSeconds(1);
+		SceneManager.LoadScene("Menu", LoadSceneMode.Single);
 	}
 }

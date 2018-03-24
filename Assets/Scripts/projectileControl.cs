@@ -18,7 +18,7 @@ public class projectileControl : MonoBehaviour {
 		transform.Translate (new Vector2 (0, projectileVelocity*Time.deltaTime/(1.0f/60.0f)));
 	}
 
-	void OnCollisionEnter2D (Collision2D collision2D) 
+	void OnCollisionEnter2D (Collision2D collision2D) {
 		if (collision2D.collider.CompareTag("Background")) {
 			DestroyObject (gameObject);
 		}

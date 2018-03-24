@@ -9,6 +9,8 @@ public class FollowerEnemyScript : MonoBehaviour {
 	public float xSpeed = 100F;
 	public float ySpeed = .5F;
 	private Rigidbody2D body;
+	public GameObject canvas;
+	public int pointValue = 1000;
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +21,7 @@ public class FollowerEnemyScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (health <= 0) {
+			canvas.SendMessage ("IncreaseScoreBy", pointValue, SendMessageOptions.DontRequireReceiver);
 			Object.Destroy (gameObject);
 		}
 		if (transform.position.x > GameObject.FindGameObjectWithTag ("Player").transform.position.x) {

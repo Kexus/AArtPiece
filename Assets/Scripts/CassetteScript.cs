@@ -1,24 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class BasicEnemy : MonoBehaviour {
-	public int health = 2;
-	public int damage = 1;
-	public GameObject canvas;
-	public int pointValue = 1000;
+public class CassetteScript : MonoBehaviour {
+	public int health = 1;
+	public float bonus = 1f;
+	public GameObject vwTimeObj;
 
 	// Use this for initialization
 	void Start () {
-		gameObject.transform.GetChild (0).GetChild (0).gameObject.GetComponent<Text> ().text = ((char)Random.Range (12449, 12544)).ToString();
-		canvas = GameObject.Find ("Canvas");
+		if (vwTimeObj == null) {
+			vwTimeObj = GameObject.Find ("Script Holder");
+		}
 	}
-
+	
 	// Update is called once per frame
 	void Update () {
+		transform.Rotate (Vector3.forward * Time.deltaTime * 360);
 		if (health <= 0) {
-			canvas.SendMessage ("IncreaseScoreBy", pointValue, SendMessageOptions.DontRequireReceiver);
 			Object.Destroy (gameObject);
 		}
 	}
@@ -28,7 +27,7 @@ public class BasicEnemy : MonoBehaviour {
 			DestroyObject (gameObject);
 		}
 		if (collision2D.collider.CompareTag("Player")) {
-			collision2D.collider.SendMessage ("TakeDamage", damage);
+			vwTimeObj.SendMessage ("IncreaseVWTime", 1f);
 			DestroyObject (gameObject);
 		}
 	}

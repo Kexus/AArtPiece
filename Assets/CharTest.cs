@@ -11,6 +11,6 @@ public class CharTest : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log((char)Random.Range (12449, 12544));
+		//Debug.Log((char)Random.Range (12449, 12544));
 	}
 }
